@@ -4,9 +4,12 @@ function sayHello(name) {
 
 var area = function(x, y) {
     console.log(x * y);
-}
+};
 
 sayHello('Artem');
-area(2, 3)
+area(2, 3);
 
-console.log(message)
+//Module
+const logger = require('./logger');
+// logger.log('Logger module is loaded in the app module');
+logger('message')
