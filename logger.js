@@ -1,4 +1,3 @@
-
 const EventsEmitter = require('events');
 const event = 'messageLogged';
 var url = 'http://mylogger.io/log';
