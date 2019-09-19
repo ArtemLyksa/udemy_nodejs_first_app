@@ -13,3 +13,16 @@ var freeMemory = os.freemem()
 //ES6 / ES2015 : ECMAScript 6
 console.log(`Total Memory: ${totalMemory}`);
 console.log(`Free Memory: ${freeMemory}`);
+
+//Filesystem module
+const fs = require('fs');
+// const files = fs.readdirSync('./');
+// console.log(files);
+
+//Async
+var callback = function(error, files) {
+    if (error) console.log('Error', error);
+    else console.log(files);
+}
+
+fs.readdir('./', callback);
