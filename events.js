@@ -1,9 +1,17 @@
+class EventArg {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
 const EventsEmitter = require('events');
 const emitter = new EventsEmitter;
-
 const event = 'messageLogged';
-emitter.on(event, function(){
-    console.log('Event received');
-})
+const eventArg = new EventArg("Ford");
 
-emitter.emit(event);
+//Listen to an event
+emitter.on(event, (eventArg) => {
+    console.log(`Received event with name "${eventArg.name}"`);
+})
+//Raise an event
+emitter.emit(event, eventArg);
